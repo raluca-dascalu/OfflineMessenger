@@ -1,0 +1,3 @@
+/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/OfflineMessenger.dir

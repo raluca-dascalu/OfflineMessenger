@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/OfflineMessenger.dir/main.cpp.o  -o OfflineMessenger 
