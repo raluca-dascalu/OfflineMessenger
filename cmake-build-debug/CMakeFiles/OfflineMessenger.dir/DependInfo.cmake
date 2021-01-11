@@ -4,7 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/raluca/Documents/RC/OfflineMessenger/main.cpp" "/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/OfflineMessenger.dir/main.cpp.o"
+  "/home/raluca/Documents/RC/OfflineMessenger/clMessenger.cpp" "/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.o"
+  "/home/raluca/Documents/RC/OfflineMessenger/client.cpp" "/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/OfflineMessenger.dir/client.cpp.o"
+  "/home/raluca/Documents/RC/OfflineMessenger/server.cpp" "/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/OfflineMessenger.dir/server.cpp.o"
+  "/home/raluca/Documents/RC/OfflineMessenger/svMessenger.cpp" "/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

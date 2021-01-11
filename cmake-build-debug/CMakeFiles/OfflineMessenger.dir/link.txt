@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/OfflineMessenger.dir/main.cpp.o  -o OfflineMessenger 
+/usr/bin/c++  -g   CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.o CMakeFiles/OfflineMessenger.dir/server.cpp.o CMakeFiles/OfflineMessenger.dir/client.cpp.o CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.o  -o OfflineMessenger 

@@ -143,32 +143,113 @@ OfflineMessenger/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/build
 .PHONY : OfflineMessenger/fast
 
-main.o: main.cpp.o
+clMessenger.o: clMessenger.cpp.o
 
-.PHONY : main.o
+.PHONY : clMessenger.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/main.cpp.o
-.PHONY : main.cpp.o
+clMessenger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.o
+.PHONY : clMessenger.cpp.o
 
-main.i: main.cpp.i
+clMessenger.i: clMessenger.cpp.i
 
-.PHONY : main.i
+.PHONY : clMessenger.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/main.cpp.i
-.PHONY : main.cpp.i
+clMessenger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.i
+.PHONY : clMessenger.cpp.i
 
-main.s: main.cpp.s
+clMessenger.s: clMessenger.cpp.s
 
-.PHONY : main.s
+.PHONY : clMessenger.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/main.cpp.s
-.PHONY : main.cpp.s
+clMessenger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.s
+.PHONY : clMessenger.cpp.s
+
+client.o: client.cpp.o
+
+.PHONY : client.o
+
+# target to build an object file
+client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/client.cpp.o
+.PHONY : client.cpp.o
+
+client.i: client.cpp.i
+
+.PHONY : client.i
+
+# target to preprocess a source file
+client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/client.cpp.i
+.PHONY : client.cpp.i
+
+client.s: client.cpp.s
+
+.PHONY : client.s
+
+# target to generate assembly for a file
+client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/client.cpp.s
+.PHONY : client.cpp.s
+
+server.o: server.cpp.o
+
+.PHONY : server.o
+
+# target to build an object file
+server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/server.cpp.o
+.PHONY : server.cpp.o
+
+server.i: server.cpp.i
+
+.PHONY : server.i
+
+# target to preprocess a source file
+server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/server.cpp.i
+.PHONY : server.cpp.i
+
+server.s: server.cpp.s
+
+.PHONY : server.s
+
+# target to generate assembly for a file
+server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/server.cpp.s
+.PHONY : server.cpp.s
+
+svMessenger.o: svMessenger.cpp.o
+
+.PHONY : svMessenger.o
+
+# target to build an object file
+svMessenger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.o
+.PHONY : svMessenger.cpp.o
+
+svMessenger.i: svMessenger.cpp.i
+
+.PHONY : svMessenger.i
+
+# target to preprocess a source file
+svMessenger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.i
+.PHONY : svMessenger.cpp.i
+
+svMessenger.s: svMessenger.cpp.s
+
+.PHONY : svMessenger.s
+
+# target to generate assembly for a file
+svMessenger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.s
+.PHONY : svMessenger.cpp.s
 
 # Help Target
 help:
@@ -179,9 +260,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... OfflineMessenger"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... clMessenger.o"
+	@echo "... clMessenger.i"
+	@echo "... clMessenger.s"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
+	@echo "... svMessenger.o"
+	@echo "... svMessenger.i"
+	@echo "... svMessenger.s"
 .PHONY : help
 
 

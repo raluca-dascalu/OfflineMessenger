@@ -82,7 +82,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/main.cpp">
+		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/clMessenger.cpp">
+			<Option target="OfflineMessenger"/>
+		</Unit>
+		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/client.cpp">
+			<Option target="OfflineMessenger"/>
+		</Unit>
+		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/client.h">
+			<Option target="OfflineMessenger"/>
+		</Unit>
+		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/server.cpp">
+			<Option target="OfflineMessenger"/>
+		</Unit>
+		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/server.h">
+			<Option target="OfflineMessenger"/>
+		</Unit>
+		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/svMessenger.cpp">
 			<Option target="OfflineMessenger"/>
 		</Unit>
 		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/CMakeLists.txt">

@@ -77,30 +77,75 @@ include CMakeFiles/OfflineMessenger.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/OfflineMessenger.dir/flags.make
 
-CMakeFiles/OfflineMessenger.dir/main.cpp.o: CMakeFiles/OfflineMessenger.dir/flags.make
-CMakeFiles/OfflineMessenger.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OfflineMessenger.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OfflineMessenger.dir/main.cpp.o -c /home/raluca/Documents/RC/OfflineMessenger/main.cpp
+CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.o: CMakeFiles/OfflineMessenger.dir/flags.make
+CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.o: ../svMessenger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.o -c /home/raluca/Documents/RC/OfflineMessenger/svMessenger.cpp
 
-CMakeFiles/OfflineMessenger.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OfflineMessenger.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/raluca/Documents/RC/OfflineMessenger/main.cpp > CMakeFiles/OfflineMessenger.dir/main.cpp.i
+CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/raluca/Documents/RC/OfflineMessenger/svMessenger.cpp > CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.i
 
-CMakeFiles/OfflineMessenger.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OfflineMessenger.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/raluca/Documents/RC/OfflineMessenger/main.cpp -o CMakeFiles/OfflineMessenger.dir/main.cpp.s
+CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/raluca/Documents/RC/OfflineMessenger/svMessenger.cpp -o CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.s
+
+CMakeFiles/OfflineMessenger.dir/server.cpp.o: CMakeFiles/OfflineMessenger.dir/flags.make
+CMakeFiles/OfflineMessenger.dir/server.cpp.o: ../server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OfflineMessenger.dir/server.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OfflineMessenger.dir/server.cpp.o -c /home/raluca/Documents/RC/OfflineMessenger/server.cpp
+
+CMakeFiles/OfflineMessenger.dir/server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OfflineMessenger.dir/server.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/raluca/Documents/RC/OfflineMessenger/server.cpp > CMakeFiles/OfflineMessenger.dir/server.cpp.i
+
+CMakeFiles/OfflineMessenger.dir/server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OfflineMessenger.dir/server.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/raluca/Documents/RC/OfflineMessenger/server.cpp -o CMakeFiles/OfflineMessenger.dir/server.cpp.s
+
+CMakeFiles/OfflineMessenger.dir/client.cpp.o: CMakeFiles/OfflineMessenger.dir/flags.make
+CMakeFiles/OfflineMessenger.dir/client.cpp.o: ../client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OfflineMessenger.dir/client.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OfflineMessenger.dir/client.cpp.o -c /home/raluca/Documents/RC/OfflineMessenger/client.cpp
+
+CMakeFiles/OfflineMessenger.dir/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OfflineMessenger.dir/client.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/raluca/Documents/RC/OfflineMessenger/client.cpp > CMakeFiles/OfflineMessenger.dir/client.cpp.i
+
+CMakeFiles/OfflineMessenger.dir/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OfflineMessenger.dir/client.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/raluca/Documents/RC/OfflineMessenger/client.cpp -o CMakeFiles/OfflineMessenger.dir/client.cpp.s
+
+CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.o: CMakeFiles/OfflineMessenger.dir/flags.make
+CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.o: ../clMessenger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.o -c /home/raluca/Documents/RC/OfflineMessenger/clMessenger.cpp
+
+CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/raluca/Documents/RC/OfflineMessenger/clMessenger.cpp > CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.i
+
+CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/raluca/Documents/RC/OfflineMessenger/clMessenger.cpp -o CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.s
 
 # Object files for target OfflineMessenger
 OfflineMessenger_OBJECTS = \
-"CMakeFiles/OfflineMessenger.dir/main.cpp.o"
+"CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.o" \
+"CMakeFiles/OfflineMessenger.dir/server.cpp.o" \
+"CMakeFiles/OfflineMessenger.dir/client.cpp.o" \
+"CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.o"
 
 # External object files for target OfflineMessenger
 OfflineMessenger_EXTERNAL_OBJECTS =
 
-OfflineMessenger: CMakeFiles/OfflineMessenger.dir/main.cpp.o
+OfflineMessenger: CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.o
+OfflineMessenger: CMakeFiles/OfflineMessenger.dir/server.cpp.o
+OfflineMessenger: CMakeFiles/OfflineMessenger.dir/client.cpp.o
+OfflineMessenger: CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.o
 OfflineMessenger: CMakeFiles/OfflineMessenger.dir/build.make
 OfflineMessenger: CMakeFiles/OfflineMessenger.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable OfflineMessenger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable OfflineMessenger"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OfflineMessenger.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
