@@ -197,6 +197,33 @@ client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/client.cpp.s
 .PHONY : client.cpp.s
 
+db.o: db.cpp.o
+
+.PHONY : db.o
+
+# target to build an object file
+db.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/db.cpp.o
+.PHONY : db.cpp.o
+
+db.i: db.cpp.i
+
+.PHONY : db.i
+
+# target to preprocess a source file
+db.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/db.cpp.i
+.PHONY : db.cpp.i
+
+db.s: db.cpp.s
+
+.PHONY : db.s
+
+# target to generate assembly for a file
+db.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/db.cpp.s
+.PHONY : db.cpp.s
+
 server.o: server.cpp.o
 
 .PHONY : server.o
@@ -266,6 +293,9 @@ help:
 	@echo "... client.o"
 	@echo "... client.i"
 	@echo "... client.s"
+	@echo "... db.o"
+	@echo "... db.i"
+	@echo "... db.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"

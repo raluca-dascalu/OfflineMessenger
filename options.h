@@ -1,0 +1,18 @@
+#ifndef OFFLINEMESSENGER_OPTIONS_H
+#define OFFLINEMESSENGER_OPTIONS_H
+
+enum commands{
+    LOGIN = 1,
+    REGISTER = 2,
+    ADDCONTACT = 3,
+    SELECTCONTACT = 4,
+    DELETECONTACT = 5,
+    LOGOUT = 6,
+    QUIT = 7
+};
+enum screens{
+    LOGREG,
+    CONTACTS,
+    CHAT};
+
+#endif //OFFLINEMESSENGER_OPTIONS_H

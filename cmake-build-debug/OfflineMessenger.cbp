@@ -91,6 +91,15 @@
 		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/client.h">
 			<Option target="OfflineMessenger"/>
 		</Unit>
+		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/db.cpp">
+			<Option target="OfflineMessenger"/>
+		</Unit>
+		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/db.h">
+			<Option target="OfflineMessenger"/>
+		</Unit>
+		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/options.h">
+			<Option target="OfflineMessenger"/>
+		</Unit>
 		<Unit filename="/home/raluca/Documents/RC/OfflineMessenger/server.cpp">
 			<Option target="OfflineMessenger"/>
 		</Unit>

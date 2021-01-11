@@ -94,12 +94,12 @@ clean: CMakeFiles/OfflineMessenger.dir/clean
 CMakeFiles/OfflineMessenger.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OfflineMessenger.dir/build.make CMakeFiles/OfflineMessenger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target OfflineMessenger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target OfflineMessenger"
 .PHONY : CMakeFiles/OfflineMessenger.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/OfflineMessenger.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OfflineMessenger.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/OfflineMessenger.dir/rule

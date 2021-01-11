@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.o"
   "CMakeFiles/OfflineMessenger.dir/client.cpp.o"
+  "CMakeFiles/OfflineMessenger.dir/db.cpp.o"
   "CMakeFiles/OfflineMessenger.dir/server.cpp.o"
   "CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.o"
   "OfflineMessenger"

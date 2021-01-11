@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/raluca/Documents/RC/OfflineMessenger/clMessenger.cpp" "/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/OfflineMessenger.dir/clMessenger.cpp.o"
   "/home/raluca/Documents/RC/OfflineMessenger/client.cpp" "/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/OfflineMessenger.dir/client.cpp.o"
+  "/home/raluca/Documents/RC/OfflineMessenger/db.cpp" "/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/OfflineMessenger.dir/db.cpp.o"
   "/home/raluca/Documents/RC/OfflineMessenger/server.cpp" "/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/OfflineMessenger.dir/server.cpp.o"
   "/home/raluca/Documents/RC/OfflineMessenger/svMessenger.cpp" "/home/raluca/Documents/RC/OfflineMessenger/cmake-build-debug/CMakeFiles/OfflineMessenger.dir/svMessenger.cpp.o"
   )
