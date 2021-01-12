@@ -294,8 +294,6 @@ void Server::showMessages(int fd) {
         strcat(rsp, reinterpret_cast<const char *>(messages[i]));
         sendResponse(fd);
     }
-
-    // get message list from database and send it one by one (number of messages first) FIXME
 }
 
 void Server::quit(int fd) {
@@ -373,7 +371,6 @@ void Server::runServer() {
     }
 }
 
-// database TODO
-// show history option TODO
+// show history option FIXME
 // reply feature by id of message and strcat(msg, r to id) before inserting in database TODO
 

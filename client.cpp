@@ -280,9 +280,6 @@ void Client::showMessages() {
     {
         getMessage();
     }
-
-    // get the number of messages and then for to print them FIXME
-    getMessage();
 }
 
 void Client::logout() {

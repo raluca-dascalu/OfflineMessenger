@@ -132,9 +132,9 @@ int db::showContacts(char user[], const unsigned char *contacts[]) {
     strcat(query, user);
     strcat(query, "';");
 
+    sqlite3_prepare_v2(db, query, -1, &stmt, 0);
     for (int i = 0; i < cnt; ++i)
     {
-        sqlite3_prepare_v2(db, query, -1, &stmt, 0);
         sqlite3_step(stmt);
         contacts[i] = sqlite3_column_text(stmt, 0);
     }
@@ -207,8 +207,9 @@ int db::showMessages(char fromuser[], char touser[], const unsigned char *messag
 
     // build query
     bzero(query, 500);
-    strcat(query, "SELECT select 'id:' || id || ' from:' || fromuser || ' message:' || message "
-                  " as MSG FROM messages WHERE (fromuser = '");
+    strcat(query, "SELECT msg FROM "
+                  "(SELECT 'id:' || id || ' from:' || fromuser || ' message:' || message AS msg "
+                  "FROM messages WHERE (fromuser = '");
     strcat(query, fromuser);
     strcat(query, "' AND touser = '");
     strcat(query, touser);
@@ -216,11 +217,11 @@ int db::showMessages(char fromuser[], char touser[], const unsigned char *messag
     strcat(query, touser);
     strcat(query, "' AND touser = '");
     strcat(query, fromuser);
-    strcat(query, "');");
+    strcat(query, "'));");
 
+    sqlite3_prepare_v2(db, query, -1, &stmt, 0);
     for (int i = 0; i < cnt; ++i)
     {
-        sqlite3_prepare_v2(db, query, -1, &stmt, 0);
         sqlite3_step(stmt);
         messages[i] = sqlite3_column_text(stmt, 0);
     }
