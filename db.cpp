@@ -41,7 +41,7 @@ void db::createTables() {
     // create table messages
     bzero(query, 500);
     strcat(query, "CREATE TABLE messages("
-                  "id INT NOT NULL PRIMARY KEY,"
+                  "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"
                   "fromuser TEXT NOT NULL, "
                   "touser TEXT NOT NULL,"
                   "message TEXT,"
@@ -81,6 +81,7 @@ int db::selectUser(char name[], char password[]) {
     strcat(query, password);
     strcat(query, "';");
 
+    // check if user is in database and if name matches with password
     sqlite3_prepare_v2(db, query, -1, &stmt, 0);
     sqlite3_step(stmt);
     int cnt = sqlite3_column_int(stmt, 0);
@@ -89,20 +90,82 @@ int db::selectUser(char name[], char password[]) {
     else return 0;
 }
 
-void db::insertContact() {
+int db::insertContact(char user1[], char user2[]) {
+    // check if user exists
+    bzero(query, 500);
+    strcat(query, "SELECT count(*) FROM users WHERE name = '");
+    strcat(query, user2);
+    strcat(query, "';");
 
+    sqlite3_prepare_v2(db, query, -1, &stmt, 0);
+    sqlite3_step(stmt);
+    int cnt = sqlite3_column_int(stmt, 0);
+
+    // if user doesn't exist in database return -1
+    if (cnt <= 0)
+    {
+        return -1;
+    }
+
+    // build query
+    bzero(query, 500);
+    strcat(query, "INSERT INTO contacts VALUES('");
+    strcat(query, user1);
+    strcat(query, "', '");
+    strcat(query, user2);
+    strcat(query, "');");
+
+    // insert into table
+    rc = sqlite3_exec(db, query, NULL, NULL, &err);
+    if (rc != SQLITE_OK)
+    {
+        printf("Insert contact error: %s\n", err);
+        return -1;
+    }
+    return rc;
 }
 
 void db::showContacts() {
 
 }
 
-void db::selectContact() {
+int db::selectContact(char user1[], char user2[]) {
+    // build query
+    bzero(query, 500);
+    strcat(query, "SELECT count(*) FROM contacts WHERE user1 = '");
+    strcat(query, user1);
+    strcat(query, "' AND user2 = '");
+    strcat(query, user2);
+    strcat(query, "';");
 
+    // check if user is in database and if name matches with password
+    sqlite3_prepare_v2(db, query, -1, &stmt, 0);
+    sqlite3_step(stmt);
+    int cnt = sqlite3_column_int(stmt, 0);
+
+    if(cnt > 0) return 1;
+    else return -1;
 }
 
-void db::insertMessage() {
+int db::insertMessage(char fromuser[], char touser[], char message[]) {
+    // build query
+    bzero(query, 500);
+    strcat(query, "INSERT INTO messages(fromuser, touser, message) VALUES('");
+    strcat(query, fromuser);
+    strcat(query, "', '");
+    strcat(query, touser);
+    strcat(query, "', '");
+    strcat(query, message);
+    strcat(query, "');");
 
+    // insert into table
+    rc = sqlite3_exec(db, query, NULL, NULL, &err);
+    if (rc != SQLITE_OK)
+    {
+        printf("Insert user error: %s\n", err);
+        return -1;
+    }
+    return rc;
 }
 
 void db::showMessages() {
