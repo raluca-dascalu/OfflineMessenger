@@ -14,7 +14,7 @@ enum commands{
 };
 enum screens{
     LOGREG,
-    CONTACTS,
-    CHAT};
+    CONTACTS
+};
 
 #endif //OFFLINEMESSENGER_OPTIONS_H

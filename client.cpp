@@ -75,7 +75,6 @@ void Client::sendCommand() {
     // send command in format 'cmdX' where X is the command
     char buf[100];
     bzero(buf, 100);
-    strcat(buf, "cmd");
     cmd = cmd + '0';
     strcat(buf, (char *) &cmd);
 
@@ -234,8 +233,21 @@ void Client::showContacts() {
     // send command to server
     sendCommand();
 
-    // get the number of contacts and then for to print them FIXME
+    // send your username
+    bzero(msg, 100);
+    strcat(msg, username);
+    sendMessage();
+
+    // get count of contacts
     getMessage();
+    int cnt = atoi(msgrec);
+
+    // for and get contact one by one
+    printf("[client] Your contacts are:\n");
+    for (int i = 0; i < cnt; ++i)
+    {
+        getMessage();
+    }
 }
 
 void Client::showMessages() {
@@ -248,10 +260,10 @@ void Client::showMessages() {
     // send command to server
     sendCommand();
 
-    // input name of contact and send it to the server
-    printf("[client] Enter a contact name from your list to see all of your messages: ");
-    readMessage();
-    sendMessage();
+    // send username to server
+    // send selected contact to server
+    // get count of messages
+    // for and get messages one by one
 
     // get the number of messages and then for to print them FIXME
     getMessage();

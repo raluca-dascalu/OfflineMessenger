@@ -213,24 +213,59 @@ void Server::sendToUser(int fd) {
     bzero(message, 100);
     strcat(message, msg);
 
-    bzero(rsp, 100);
-    if (database.insertMessage(username, userChat, msg) == -1)
+    if (message)
     {
-        strcat(rsp, "Error sending message");
-    } else {
-        strcat(rsp, "Message sent successfully");
+        bzero(rsp, 100);
+        if (database.insertMessage(username, userChat, msg) == -1)
+        {
+            strcat(rsp, "Error sending message");
+        } else {
+            strcat(rsp, "Message sent successfully");
+        }
+        sendResponse(fd);
     }
-    sendResponse(fd);
 }
 
 void Server::showContacts(int fd) {
-    // get contact list from database and send it one by one (number of contacts first) FIXME
+    // get username
+    char user[100];
+    bzero(user, 100);
+    getMessage(fd);
+    strcat(user, msg);
+
+    // get count and list of contacts from database
+    unsigned const char *contacts[100];
+    int cnt = database.showContacts(user, contacts);
+
+    // convert and send count
+    int aux = cnt, nd = 0;
+    char count[10];
+    while (aux) { nd++; aux /= 10;}
+    aux = cnt;
+    int ndcpy = nd;
+    while (aux) {count[nd - 1] = (aux % 10) + '0'; aux /= 10; nd--;}
+    count[ndcpy] = '\0';
     bzero(rsp, 100);
-    strcat(rsp, "success or fail");
+    strcat(rsp, count);
     sendResponse(fd);
+
+    // send contacts one by one
+    for (int i = 0; i < cnt; ++i)
+    {
+        bzero(rsp, 100);
+        strcat(rsp, reinterpret_cast<const char *>(contacts[i]));
+        sendResponse(fd);
+    }
 }
 
 void Server::showMessages(int fd) {
+    // get username
+    // get contact name
+    // get count of messages from database
+    // send count
+    // get list of messages from database
+    // send one by one
+
     // get message list from database and send it one by one (number of messages first) FIXME
     bzero(rsp, 100);
     strcat(rsp, "success or fail");
@@ -277,12 +312,7 @@ void Server::handleCommand(int opt, int fd) {
 
 void Server::handleClient(int fd) {
     getMessage(fd);
-
-    // check if it is command
-    if (msg[0] == 'c' && msg[1] == 'm' && msg[2] == 'd')
-    {
-        handleCommand(int(msg[3] - '0'), fd);
-    }
+    handleCommand(atoi(msg), fd);
 }
 
 void Server::runServer() {
@@ -318,8 +348,6 @@ void Server::runServer() {
 }
 
 // database TODO
-// show contacts TODO
 // show history option TODO
-// app will store messages in db: id, sent by user, message TODO
 // reply feature by id of message and strcat(msg, r to id) before inserting in database TODO
 

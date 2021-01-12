@@ -91,22 +91,6 @@ int db::selectUser(char name[], char password[]) {
 }
 
 int db::insertContact(char user1[], char user2[]) {
-    // check if user exists
-    bzero(query, 500);
-    strcat(query, "SELECT count(*) FROM users WHERE name = '");
-    strcat(query, user2);
-    strcat(query, "';");
-
-    sqlite3_prepare_v2(db, query, -1, &stmt, 0);
-    sqlite3_step(stmt);
-    int cnt = sqlite3_column_int(stmt, 0);
-
-    // if user doesn't exist in database return -1
-    if (cnt <= 0)
-    {
-        return -1;
-    }
-
     // build query
     bzero(query, 500);
     strcat(query, "INSERT INTO contacts VALUES('");
@@ -125,8 +109,37 @@ int db::insertContact(char user1[], char user2[]) {
     return rc;
 }
 
-void db::showContacts() {
+int db::contactsCount(char user[]) {
+    // build query
+    bzero(query, 500);
+    strcat(query, "SELECT count(*) FROM contacts WHERE user1 = '");
+    strcat(query, user);
+    strcat(query, "';");
 
+    sqlite3_prepare_v2(db, query, -1, &stmt, 0);
+    sqlite3_step(stmt);
+    int cnt = sqlite3_column_int(stmt, 0);
+
+    return cnt;
+}
+
+int db::showContacts(char user[], const unsigned char *contacts[]) {
+    int cnt = contactsCount(user);
+
+    // build query
+    bzero(query, 500);
+    strcat(query, "SELECT user2 FROM contacts WHERE user1 = '");
+    strcat(query, user);
+    strcat(query, "';");
+
+    for (int i = 0; i < cnt; ++i)
+    {
+        sqlite3_prepare_v2(db, query, -1, &stmt, 0);
+        sqlite3_step(stmt);
+        contacts[i] = sqlite3_column_text(stmt, 0);
+    }
+
+    return cnt;
 }
 
 int db::selectContact(char user1[], char user2[]) {
@@ -168,6 +181,22 @@ int db::insertMessage(char fromuser[], char touser[], char message[]) {
     return 0;
 }
 
-void db::showMessages() {
+int db::messagesCount(char fromuser[], char touser[]) {
+    // build query
+    bzero(query, 500);
+    strcat(query, "SELECT count(*) FROM messages WHERE fromuser = '");
+    strcat(query, fromuser);
+    strcat(query, "' AND touser = '");
+    strcat(query, touser);
+    strcat(query, "';");
 
+    sqlite3_prepare_v2(db, query, -1, &stmt, 0);
+    sqlite3_step(stmt);
+    int cnt = sqlite3_column_int(stmt, 0);
+
+    return cnt;
+}
+
+void db::showMessages(char fromuser[], char touser[]) {
+    // message format "id:? from:? message:?" in string
 }
