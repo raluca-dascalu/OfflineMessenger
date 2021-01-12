@@ -6,10 +6,11 @@ enum commands{
     REGISTER = 2,
     ADDCONTACT = 3,
     SELECTCONTACT = 4,
-    SHOWCONTACTS = 5,
-    SHOWMESSAGES = 6,
-    LOGOUT = 7,
-    QUIT = 8
+    SENDMESSAGE = 5,
+    SHOWCONTACTS = 6,
+    SHOWMESSAGES = 7,
+    LOGOUT = 8,
+    QUIT = 9
 };
 enum screens{
     LOGREG,

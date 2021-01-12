@@ -165,7 +165,7 @@ int db::insertMessage(char fromuser[], char touser[], char message[]) {
         printf("Insert user error: %s\n", err);
         return -1;
     }
-    return rc;
+    return 0;
 }
 
 void db::showMessages() {
