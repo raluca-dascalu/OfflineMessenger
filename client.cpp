@@ -260,10 +260,26 @@ void Client::showMessages() {
     // send command to server
     sendCommand();
 
-    // send username to server
-    // send selected contact to server
+    // send your username
+    bzero(msg, 100);
+    strcat(msg, username);
+    sendMessage();
+
+    // send contact's name
+    bzero(msg, 100);
+    strcat(msg, userChat);
+    sendMessage();
+
     // get count of messages
+    getMessage();
+    int cnt = atoi(msgrec);
+
     // for and get messages one by one
+    printf("[client] Your messages are:\n");
+    for (int i = 0; i < cnt; ++i)
+    {
+        getMessage();
+    }
 
     // get the number of messages and then for to print them FIXME
     getMessage();

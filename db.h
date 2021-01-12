@@ -27,7 +27,7 @@ public:
     int selectContact(char user1[], char user2[]);                          // check to see if the contact is in your list
     int insertMessage(char fromuser[], char touser[], char message[]);      // insert a new message
     int messagesCount(char fromuser[], char touser[]);                      // get count of messages
-    void showMessages(char fromuser[], char touser[]);                      // show all messages
+    int showMessages(char fromuser[], char touser[], const unsigned char *messages[]);
 
 
 };

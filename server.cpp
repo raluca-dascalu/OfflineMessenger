@@ -260,16 +260,42 @@ void Server::showContacts(int fd) {
 
 void Server::showMessages(int fd) {
     // get username
+    char user[100];
+    bzero(user, 100);
+    getMessage(fd);
+    strcat(user, msg);
+
     // get contact name
-    // get count of messages from database
-    // send count
-    // get list of messages from database
-    // send one by one
+    getMessage(fd);
+    char userChat[100];
+    bzero(userChat, 100);
+    strcat(userChat, msg);
+
+    // get count and list of messages from database
+    unsigned const char *messages[100];
+    int cnt = database.showMessages(user, userChat, messages);
+
+    // convert and send count
+    int aux = cnt, nd = 0;
+    char count[10];
+    while (aux) { nd++; aux /= 10;}
+    aux = cnt;
+    int ndcpy = nd;
+    while (aux) {count[nd - 1] = (aux % 10) + '0'; aux /= 10; nd--;}
+    count[ndcpy] = '\0';
+    bzero(rsp, 100);
+    strcat(rsp, count);
+    sendResponse(fd);
+
+    // send messages one by one
+    for (int i = 0; i < cnt; ++i)
+    {
+        bzero(rsp, 100);
+        strcat(rsp, reinterpret_cast<const char *>(messages[i]));
+        sendResponse(fd);
+    }
 
     // get message list from database and send it one by one (number of messages first) FIXME
-    bzero(rsp, 100);
-    strcat(rsp, "success or fail");
-    sendResponse(fd);
 }
 
 void Server::quit(int fd) {

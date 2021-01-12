@@ -184,11 +184,15 @@ int db::insertMessage(char fromuser[], char touser[], char message[]) {
 int db::messagesCount(char fromuser[], char touser[]) {
     // build query
     bzero(query, 500);
-    strcat(query, "SELECT count(*) FROM messages WHERE fromuser = '");
+    strcat(query, "SELECT count(*) FROM messages WHERE (fromuser = '");
     strcat(query, fromuser);
     strcat(query, "' AND touser = '");
     strcat(query, touser);
-    strcat(query, "';");
+    strcat(query, "') OR (fromuser = '");
+    strcat(query, touser);
+    strcat(query, "' AND touser = '");
+    strcat(query, fromuser);
+    strcat(query, "');");
 
     sqlite3_prepare_v2(db, query, -1, &stmt, 0);
     sqlite3_step(stmt);
@@ -197,6 +201,29 @@ int db::messagesCount(char fromuser[], char touser[]) {
     return cnt;
 }
 
-void db::showMessages(char fromuser[], char touser[]) {
-    // message format "id:? from:? message:?" in string
+int db::showMessages(char fromuser[], char touser[], const unsigned char *messages[]) {
+    // message format "id:? from:? message:?"
+    int cnt = messagesCount(fromuser, touser);
+
+    // build query
+    bzero(query, 500);
+    strcat(query, "SELECT select 'id:' || id || ' from:' || fromuser || ' message:' || message "
+                  " as MSG FROM messages WHERE (fromuser = '");
+    strcat(query, fromuser);
+    strcat(query, "' AND touser = '");
+    strcat(query, touser);
+    strcat(query, "') OR (fromuser = '");
+    strcat(query, touser);
+    strcat(query, "' AND touser = '");
+    strcat(query, fromuser);
+    strcat(query, "');");
+
+    for (int i = 0; i < cnt; ++i)
+    {
+        sqlite3_prepare_v2(db, query, -1, &stmt, 0);
+        sqlite3_step(stmt);
+        messages[i] = sqlite3_column_text(stmt, 0);
+    }
+
+    return cnt;
 }
